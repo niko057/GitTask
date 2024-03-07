@@ -4,7 +4,7 @@
 
 int[] arr1 = { 211, 9, -6, 12, 34, 56, 32, 5, 19 };
 
-int[] arr2 = { 20, 23 };
+int[] arr2 = { 211,9,-6, };
 
        bool check = false;
 
@@ -12,7 +12,7 @@ int[] arr2 = { 20, 23 };
 
 for (int i = 0; i < arr2.Length; i++)
 {
-
+    check = false;
 
     for (int j = 0; j < arr1.Length; j++)
     {
@@ -20,15 +20,17 @@ for (int i = 0; i < arr2.Length; i++)
 
         {
             check = true;
-           
-           
+            break;
            
         }
-
-        
-
+       
+       
     }
-   
+    if (check == false)
+    {
+        check= false;
+        break;
+    }
 }
 Console.WriteLine(check);
 
